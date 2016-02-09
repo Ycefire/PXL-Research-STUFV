@@ -1,6 +1,6 @@
 # PXL-Research-STUFV
 
-In mapje research vind je:  [research](https://github.com/Ycefire/PXL-Research-STUFV/tree/master/Research)
+In mapje  [research](https://github.com/Ycefire/PXL-Research-STUFV/tree/master/Research) vind je: 
  - TXT bestand met info over hoe je de promille moet berekenen.
  - Pdf met Mockup van de applicatie. (in deze mockup is geen rekening gehouden met kleuren, 
                                       aangezien ik nog niet weet wat het beste gaat zijn)
