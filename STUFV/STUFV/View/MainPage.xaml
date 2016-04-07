@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="STUFV.MainPage"
+xmlns:local="clr-namespace:STUFV;assembly=STUFV"
+xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+<MasterDetailPage.BindingContext>
+	<local:MainPageViewModel/>
+</MasterDetailPage.BindingContext>
+
+	<MasterDetailPage.Master>
+	<ContentPage Title="title" Icon="menu.png" Padding="10,20,10,10"  >
+	<StackLayout Spacing="20">
+
+<!--	<Image Source="icon.png" >
+
+	</Image>-->
+
+	<controls:CircleImage Source="icon.png" Aspect="AspectFill" BorderThickness="3" HorizontalOptions="Center" BorderColor="White" >
+	<controls:CircleImage.WidthRequest>
+    <OnPlatform x:TypeArguments="x:Double"
+      iOS="55"
+      Android="100"
+      WinPhone="75"/>
+   </controls:CircleImage.WidthRequest>
+   <controls:CircleImage.HeightRequest>
+    <OnPlatform x:TypeArguments="x:Double"
+      iOS="55"
+      Android="100"
+      WinPhone="75"/>
+   </controls:CircleImage.HeightRequest>
+	</controls:CircleImage>
+
+
+	<Label Text="Van Even Stijn 24" HorizontalOptions="Center"/>
+
+	<StackLayout HeightRequest="1" BackgroundColor="White">
+	</StackLayout>
+		<Button Text="Events" Clicked="onClick1"></Button>
+		<Button Text="Lifesavers" Clicked="onClick2"></Button>
+		<Button Text="Vervoer" Clicked="onClick3"></Button>
+		<Button Text="Info" Clicked="onClick4"></Button>
+		<Button Text="Promille berekenen" Clicked="onClick5"></Button>
+		<Button Text="Newsfeed" Clicked="onClick6"></Button>
+		<Button Text="Instellingen" Clicked="onClick7"></Button>
+		</StackLayout>
+	</ContentPage>
+</MasterDetailPage.Master>
+</MasterDetailPage>

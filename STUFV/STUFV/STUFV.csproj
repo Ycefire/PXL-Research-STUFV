@@ -32,18 +32,39 @@
   <ItemGroup>
     <Compile Include="STUFV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Detail1.xaml.cs">
-      <DependentUpon>Detail1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Detail2.xaml.cs">
-      <DependentUpon>Detail2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Detail3.xaml.cs">
-      <DependentUpon>Detail3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\EventOverviewView.xaml.cs">
+      <DependentUpon>EventOverviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\EventOverviewViewModel.cs" />
+    <Compile Include="View\LifeSaversView.xaml.cs">
+      <DependentUpon>LifeSaversView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InfoView.xaml.cs">
+      <DependentUpon>InfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AlcoholView.xaml.cs">
+      <DependentUpon>AlcoholView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewsOverviewView.xaml.cs">
+      <DependentUpon>NewsOverviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\LifeSaversViewModel.cs" />
+    <Compile Include="ViewModel\InfoViewModel.cs" />
+    <Compile Include="ViewModel\AlcoholViewModel.cs" />
+    <Compile Include="ViewModel\NewsOverviewViewModel.cs" />
+    <Compile Include="ViewModel\TransportViewModel.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="View\TransportView.xaml.cs">
+      <DependentUpon>TransportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\CustomCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -65,17 +86,44 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Detail1.xaml">
+    <EmbeddedResource Include="View\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Detail2.xaml">
+    <EmbeddedResource Include="View\EventOverviewView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Detail3.xaml">
+    <EmbeddedResource Include="View\LifeSaversView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.xaml">
+    <EmbeddedResource Include="View\InfoView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AlcoholView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewsOverviewView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SettingsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TransportView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STUFV.DAL\STUFV.DAL.csproj">
+      <Project>{84DC2132-D59D-4A24-B5B6-C85B81C62426}</Project>
+      <Name>STUFV.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STUFV.Domain\STUFV.Domain.csproj">
+      <Project>{4E012FB4-3B96-4BC6-B82C-FE3FEABF69FC}</Project>
+      <Name>STUFV.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Utility\" />
   </ItemGroup>
 </Project>
